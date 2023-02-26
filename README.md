@@ -23,19 +23,20 @@ else
   echo "No need to clean RAM."
 fi
 ```
-Here's how the script works:
+### How the script works:
+- The THRESHOLD variable is set to 90% of the total amount of RAM on the system, in bytes.
+- The FREE variable is set to the current amount of free memory on the system, in bytes.
+- If the amount of free memory is less than the threshold, the script clears the page cache, dentries, and inodes using the sync and drop_caches commands.
+- The script outputs a message indicating whether or not RAM cleaning was performed.
 
-The THRESHOLD variable is set to 90% of the total amount of RAM on the system, in bytes.
+You can save this script to a file (e.g. clean_ram.sh) and make it executable using the command 
+```bash
+chmod +x clean_ram.sh
+```
 
-The FREE variable is set to the current amount of free memory on the system, in bytes.
+Then, you can add it to a cron job to run at regular intervals, like this:
 
-If the amount of free memory is less than the threshold, the script clears the page cache, dentries, and inodes using the sync and drop_caches commands.
-
-The script outputs a message indicating whether or not RAM cleaning was performed.
-
-You can save this script to a file (e.g. clean_ram.sh) and make it executable using the command chmod +x clean_ram.sh. Then, you can add it to a cron job to run at regular intervals, like this:
-
-```ruby
+```bash
 # Run the script every 5 minutes
 */5 * * * * /path/to/clean_ram.sh
 ```
