@@ -111,4 +111,27 @@ Note that while Zram can improve performance by reducing the amount of data that
 
 This Bash scripts  should work on any Linux system that has Bash installed, as well as other Unix-like systems that have Bash installed.
 
+## Other tips and tricks  to optimize and clean up your RAM on Bash-installed systems:
+
+### Use a lightweight window manager or desktop environment.
+Using a lightweight window manager or desktop environment can reduce the amount of memory used by the system, leaving more free memory available for applications. Some popular lightweight options include Xfce, LXDE, and Openbox.
+
+### Disable unnecessary services and daemons.
+Disabling unnecessary services and daemons can free up memory and reduce CPU usage. Use the systemctl command to manage systemd services, and use the chkconfig command to manage SysV init services.
+
+### Close unused applications and tabs.
+Closing unused applications and tabs can free up memory and reduce the load on the CPU. Use a task manager such as htop or top to monitor system resources and identify any applications or processes that are using excessive resources.
+
+### Use the nice command to prioritize processes.
+The nice command can be used to adjust the priority of a process, giving it more or less CPU time. Prioritizing CPU-intensive processes can help reduce the load on the CPU and free up more memory.
+
+### Clear the disk cache.
+Clearing the disk cache can free up memory and improve system performance. Use the sync command to write data to disk, and then use the echo 3 > /proc/sys/vm/drop_caches command to clear the page cache, dentries, and inodes.
+
+# Use the ulimit command to set process limits.
+The ulimit command can be used to set limits on system resources such as CPU time and memory usage for individual processes. This can help prevent processes from using excessive resources and causing the system to become unresponsive.
+
+These tips and tricks can help optimize and clean up your RAM on Bash-installed systems, improving system performance and reducing the likelihood of crashes and freezes due to insufficient memory.
+### copyright Volkan Sah
+
 
