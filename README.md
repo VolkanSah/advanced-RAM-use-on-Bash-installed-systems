@@ -1,5 +1,5 @@
 # Advanced RAM use on all Bash installed systems
-### Advanced Free memory
+## Advanced Free memory
 Bash script that you can use in a cron job to clean the RAM if it's more than 90% used:
 
 ```bash
@@ -44,7 +44,7 @@ This will run the script every 5 minutes and check if the amount of free memory 
 
 
 ####################################
-# Advanced ZRAM use
+## Advanced ZRAM use
 Zram is a Linux kernel module that allows for compressed RAM-based swap space. Using Zram can improve performance on systems with limited RAM, as it can reduce the amount of data that needs to be written to disk.
 
 ### Check if Zram is already installed.
