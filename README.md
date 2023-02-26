@@ -1,5 +1,5 @@
 # Advanced RAM use on all Bash installed systems
-### Free memory for Debian, Ubuntu, Arch, FreeBSD and other
+### Advanced Free memory
 Bash script that you can use in a cron job to clean the RAM if it's more than 90% used:
 
 ```bash
