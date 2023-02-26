@@ -124,11 +124,14 @@ Closing unused applications and tabs can free up memory and reduce the load on t
 The nice command can be used to adjust the priority of a process, giving it more or less CPU time. Prioritizing CPU-intensive processes can help reduce the load on the CPU and free up more memory.
 
 ### Clear the disk cache.
-Clearing the disk cache can free up memory and improve system performance. Use the sync command to write data to disk, and then use the echo 3 > /proc/sys/vm/drop_caches command to clear the page cache, dentries, and inodes.
+- Clearing the disk cache can free up memory and improve system performance. Use the sync command to write data to disk, and then use the 
+```bash
+echo 3 > /proc/sys/vm/drop_caches 
+```
+command to clear the page cache, dentries, and inodes.
 
 # Use the ulimit command to set process limits.
-The ulimit command can be used to set limits on system resources such as CPU time and memory usage for individual processes. This can help prevent processes from using excessive resources and causing the system to become unresponsive.
-
+- The ulimit command can be used to set limits on system resources such as CPU time and memory usage for individual processes. This can help prevent processes from using excessive resources and causing the system to become unresponsive.
 These tips and tricks can help optimize and clean up your RAM on Bash-installed systems, improving system performance and reducing the likelihood of crashes and freezes due to insufficient memory.
 ### copyright Volkan Sah
 
