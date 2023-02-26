@@ -41,3 +41,5 @@ Then, you can add it to a cron job to run at regular intervals, like this:
 */5 * * * * /path/to/clean_ram.sh
 ```
 This will run the script every 5 minutes and check if the amount of free memory is below the threshold. If it is, the script will clear the RAM cache to free up memory. This script should work on all of the Linux and BSD systems you listed.
+
+This Bash script  should work on any Linux system that has Bash installed, as well as other Unix-like systems that have Bash installed.
