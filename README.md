@@ -64,8 +64,8 @@ Configure the Zram device.
 After the Zram device is created, you need to configure it by setting the size of the swap space and enabling compression. Here's an example configuration that sets the size of the swap space to 1 GB and enables compression:
 
 ```bash
-$ sudo sysctl -w vm.swappiness=10
-$ sudo zramctl -f -s 1g -t 2
+sudo sysctl -w vm.swappiness=10
+sudo zramctl -f -s 1g -t 2
 ```
 
 This sets the vm.swappiness value to 10 (which determines how aggressively the kernel swaps out memory to disk), creates a Zram device with a 1 GB swap size, and enables LZ4 compression with a compression ratio of 2:1.
@@ -74,14 +74,14 @@ Mount the Zram device.
 Finally, you need to mount the Zram device as swap space using the following command:
 
 ```bash
-$ sudo mkswap /dev/zram0
-$ sudo swapon /dev/zram0
+sudo mkswap /dev/zram0
+sudo swapon /dev/zram0
 ```
 
 This formats the Zram device as swap space and activates it. You can check if the Zram device is being used as swap space by running the following command:
 
 ```bash
-$ swapon -s
+sudo swapon -s
 ```
 This will show a list of all the active swap devices, including the Zram device if it's being used.
 -- You can automate this process by adding the necessary commands to a Bash script and running it as a cron job or a systemd service --
@@ -99,7 +99,7 @@ This command uses the free command to get the total amount of physical RAM, divi
 Once the Zram device is created, you can activate it as swap space using the swapon command:
 
 ```bash
-$ sudo swapon /dev/zram0
+sudo swapon /dev/zram0
 ```
 
 This will activate the Zram device as swap space, and it will be used by the system when the physical RAM is running low. You can check if the Zram device is being used as swap space by running the swapon -s command.
@@ -126,7 +126,7 @@ The nice command can be used to adjust the priority of a process, giving it more
 ### Clear the disk cache.
 - Clearing the disk cache can free up memory and improve system performance. Use the sync command to write data to disk, and then use the 
 ```bash
-echo 3 > /proc/sys/vm/drop_caches 
+sudo echo 3 > /proc/sys/vm/drop_caches 
 ```
 command to clear the page cache, dentries, and inodes.
 
