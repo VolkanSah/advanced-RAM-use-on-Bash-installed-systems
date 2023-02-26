@@ -130,7 +130,7 @@ echo 3 > /proc/sys/vm/drop_caches
 ```
 command to clear the page cache, dentries, and inodes.
 
-# Use the ulimit command to set process limits.
+### Use the ulimit command to set process limits.
 - The ulimit command can be used to set limits on system resources such as CPU time and memory usage for individual processes. This can help prevent processes from using excessive resources and causing the system to become unresponsive.
 These tips and tricks can help optimize and clean up your RAM on Bash-installed systems, improving system performance and reducing the likelihood of crashes and freezes due to insufficient memory.
 ### copyright Volkan Sah
