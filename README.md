@@ -84,12 +84,29 @@ This formats the Zram device as swap space and activates it. You can check if th
 
 ```bash
 $ swapon -s
-```bash
 ```
 This will show a list of all the active swap devices, including the Zram device if it's being used.
 -- You can automate this process by adding the necessary commands to a Bash script and running it as a cron job or a systemd service --
 
 
+### Zram swap space as a percentage of the physical RAM
+You can configure the size of the Zram swap space as a percentage of the physical RAM by using the total_mem option when creating the Zram device. In this example we create a Zram device with a swap space size of 25% of the physical RAM:
+
+```bash
+sudo zramctl --find --size $(($(free | awk '/^Mem:/{print $2}') / 4)) --mkswap
+```
+
+This command uses the free command to get the total amount of physical RAM, divides it by 4 to get 25%, and sets the size option of the zramctl command to the calculated value. The --find option tells zramctl to find an unused device number, and the --mkswap option tells it to format the device as swap space.
+
+Once the Zram device is created, you can activate it as swap space using the swapon command:
+
+```bash
+$ sudo swapon /dev/zram0
+```
+
+This will activate the Zram device as swap space, and it will be used by the system when the physical RAM is running low. You can check if the Zram device is being used as swap space by running the swapon -s command.
+
+Note that while Zram can improve performance by reducing the amount of data that needs to be written to disk, it is not a substitute for physical RAM. If you're running memory-intensive applications, it's still recommended to have enough physical RAM to avoid excessive swapping.
 
 
 This Bash scripts  should work on any Linux system that has Bash installed, as well as other Unix-like systems that have Bash installed.
