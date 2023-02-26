@@ -1,4 +1,4 @@
-# advanced-linux-server-tipps
+# Advanced Linux Server Tips
 ### Free memory for Debian, Ubuntu, Arch, FreeBSD and other
 Bash script that you can use in a cron job to clean the RAM if it's more than 90% used:
 
