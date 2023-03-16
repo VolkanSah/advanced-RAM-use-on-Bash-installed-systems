@@ -77,7 +77,6 @@ Finally, you need to mount the Zram device as swap space using the following com
 sudo mkswap /dev/zram0
 sudo swapon /dev/zram0
 ```
-
 This formats the Zram device as swap space and activates it. You can check if the Zram device is being used as swap space by running the following command:
 
 ```bash
