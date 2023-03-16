@@ -40,7 +40,7 @@ Then, you can add it to a cron job to run at regular intervals, like this:
 # Run the script every 5 minutes
 */5 * * * * /path/to/clean_ram.sh
 ```
-This will run the script every 5 minutes and check if the amount of free memory is below the threshold. If it is, the script will clear the RAM cache to free up memory. This script should work on all of the Linux and BSD systems you listed.
+This will run the script every 5 minutes and check if the amount of free memory is below the threshold. If it is, the script will clear the RAM cache to free up memory. This script should work on all of the Linux and BSD systems.
 
 ## Advanced ZRAM use
 Zram is a Linux kernel module that allows for compressed RAM-based swap space. Using Zram can improve performance on systems with limited RAM, as it can reduce the amount of data that needs to be written to disk.
