@@ -1,5 +1,5 @@
 
-# Advanced RAM Use on Bash-installed Systems (2024)
+# Advanced RAM use on Bash-installed Systems (2024)
 
 This guide provides scripts and tips to optimize RAM usage on systems with Bash installed.
 
