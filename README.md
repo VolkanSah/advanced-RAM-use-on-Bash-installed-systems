@@ -139,4 +139,4 @@ ulimit -t <cpu_time_limit>
 
 These tips help optimize and clean up RAM on Bash-installed systems, improving performance and stability.
 ### Credits
-**Volkan Sah**
+**Volkan Kücükbudak**
